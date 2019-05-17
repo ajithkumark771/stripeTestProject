@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Stripe/Stripe.h>
+
 
 @interface AppDelegate ()
 
@@ -17,10 +19,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[STPPaymentConfiguration sharedConfiguration] setPublishableKey:@"pk_test_3eZrdFHX1wGsbcggEgd8c9QX"];
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application
+continueUserActivity:(NSUserActivity *)userActivity
+ restorationHandler:(void (^)(NSArray *))restorationHandler {
+    
+    if (userActivity.activityType == NSUserActivityTypeBrowsingWeb) {
+        if (userActivity.webpageURL) {
+            BOOL stripeHandled = [Stripe handleStripeURLCallbackWithURL:userActivity.webpageURL];
+            if (stripeHandled) {
+                return YES;
+            } else {
+                NSLog(@"not a stripe url");
+            }
+            return NO;
+        }
+    }
+    
+    
+    return NO;
+    
+}
 
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    NSLog(@"%@",url);
+    BOOL stripeHandled = [Stripe handleStripeURLCallbackWithURL:url];
+    if (stripeHandled) {
+        return YES;
+    } else {
+       
+        NSLog(@"not a stripe url");
+    }
+    return NO;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

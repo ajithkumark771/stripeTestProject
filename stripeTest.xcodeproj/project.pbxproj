@@ -13,9 +13,14 @@
 		A691D309228C2D6C008F0F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691D308228C2D6C008F0F99 /* Assets.xcassets */; };
 		A691D30C228C2D6C008F0F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A691D30A228C2D6C008F0F99 /* LaunchScreen.storyboard */; };
 		A691D30F228C2D6C008F0F99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A691D30E228C2D6C008F0F99 /* main.m */; };
+		A691D317228C3B9F008F0F99 /* Api_Handler.m in Sources */ = {isa = PBXBuildFile; fileRef = A691D316228C3B9E008F0F99 /* Api_Handler.m */; };
+		F649E5339B60C0DB3F527D0D /* libPods-stripeTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478B9CCB7400137D5A2B8AE3 /* libPods-stripeTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		478B9CCB7400137D5A2B8AE3 /* libPods-stripeTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-stripeTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A0C52A3681C4527592864CF /* Pods-stripeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-stripeTest/Pods-stripeTest.release.xcconfig"; sourceTree = "<group>"; };
+		A6003270ED512C72011FAFAD /* Pods-stripeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stripeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stripeTest/Pods-stripeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A691D2FC228C2D17008F0F99 /* stripeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stripeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A691D2FF228C2D17008F0F99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A691D300228C2D17008F0F99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +31,8 @@
 		A691D30B228C2D6C008F0F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A691D30D228C2D6C008F0F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A691D30E228C2D6C008F0F99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A691D315228C3B9E008F0F99 /* Api_Handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api_Handler.h; sourceTree = "<group>"; };
+		A691D316228C3B9E008F0F99 /* Api_Handler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api_Handler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F649E5339B60C0DB3F527D0D /* libPods-stripeTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33F8B886B17B83903826BC56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				478B9CCB7400137D5A2B8AE3 /* libPods-stripeTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A691D2F3228C2D16008F0F99 = {
 			isa = PBXGroup;
 			children = (
 				A691D2FE228C2D17008F0F99 /* stripeTest */,
 				A691D2FD228C2D17008F0F99 /* Products */,
+				EF90A1D03C1E657B311BA476 /* Pods */,
+				33F8B886B17B83903826BC56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,8 @@
 				A691D300228C2D17008F0F99 /* AppDelegate.m */,
 				A691D302228C2D17008F0F99 /* ViewController.h */,
 				A691D303228C2D17008F0F99 /* ViewController.m */,
+				A691D315228C3B9E008F0F99 /* Api_Handler.h */,
+				A691D316228C3B9E008F0F99 /* Api_Handler.m */,
 				A691D305228C2D17008F0F99 /* Main.storyboard */,
 				A691D308228C2D6C008F0F99 /* Assets.xcassets */,
 				A691D30A228C2D6C008F0F99 /* LaunchScreen.storyboard */,
@@ -71,6 +91,15 @@
 			path = stripeTest;
 			sourceTree = "<group>";
 		};
+		EF90A1D03C1E657B311BA476 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6003270ED512C72011FAFAD /* Pods-stripeTest.debug.xcconfig */,
+				6A0C52A3681C4527592864CF /* Pods-stripeTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A691D312228C2D6D008F0F99 /* Build configuration list for PBXNativeTarget "stripeTest" */;
 			buildPhases = (
+				44F9DEE96535EE0A621609FE /* [CP] Check Pods Manifest.lock */,
 				A691D2F8228C2D17008F0F99 /* Sources */,
 				A691D2F9228C2D17008F0F99 /* Frameworks */,
 				A691D2FA228C2D17008F0F99 /* Resources */,
+				F6B3492003AD1F7299DAAD4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +167,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44F9DEE96535EE0A621609FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stripeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B3492003AD1F7299DAAD4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-stripeTest/Pods-stripeTest-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Stripe/Stripe.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Stripe.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stripeTest/Pods-stripeTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A691D2F8228C2D17008F0F99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +222,7 @@
 				A691D304228C2D17008F0F99 /* ViewController.m in Sources */,
 				A691D30F228C2D6C008F0F99 /* main.m in Sources */,
 				A691D301228C2D17008F0F99 /* AppDelegate.m in Sources */,
+				A691D317228C3B9F008F0F99 /* Api_Handler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,11 +362,13 @@
 		};
 		A691D313228C2D6D008F0F99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6003270ED512C72011FAFAD /* Pods-stripeTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE42C2X3G3;
 				INFOPLIST_FILE = stripeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +381,13 @@
 		};
 		A691D314228C2D6D008F0F99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A0C52A3681C4527592864CF /* Pods-stripeTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RE42C2X3G3;
 				INFOPLIST_FILE = stripeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

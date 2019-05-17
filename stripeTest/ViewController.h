@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Api_Handler.h"
 
 @interface ViewController : UIViewController
+{
+    NSString *client_secret;
+    NSString *idSecret;
+    Api_Handler *getdata;
+}
+- (IBAction)payButton:(id)sender;
 
 
 @end
